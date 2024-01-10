@@ -1,0 +1,78 @@
+@import "variables";
+header {
+  box-shadow: 0 15px 33px 0 rgba(0, 0, 0, 0.07);
+  padding: 35px 0 35px;
+}
+
+.header-container {
+  justify-content: space-between;
+  margin: 0 auto;
+  width: 1540px;
+
+  .logo {
+    font-size: 0;
+    margin-right: 130px;
+    vertical-align: middle;
+  }
+}
+
+.header-nav {
+  font-size: 0;
+  vertical-align: middle;
+
+  ul {
+    list-style: none;
+    padding: 0;
+  }
+
+  li {
+    display: inline-block;
+    font-size: 0;
+    margin-right: 33px;
+  }
+
+  li:last-child {
+    margin-right: 0;
+  }
+
+  .menu-item {
+    color: $dark;
+    display: inline-block;
+    font-size: 18px;
+    font-weight: bold;
+    line-height: 22px;
+    vertical-align: middle;
+  }
+
+  .menu-item + img {
+    display: inline-block;
+    vertical-align: middle;
+  }
+}
+
+.header-contact {
+  align-items: center;
+
+  .header-phone {
+    font-size: 24px;
+    font-weight: 600;
+    margin-left: 0;
+    white-space: normal
+  }
+
+  .header-phone b {
+    margin: 0 3px;
+  }
+
+  .header-order {
+    margin-left: 54px;
+  }
+
+  .btn {
+    font-size: 20px;
+    font-weight: 600;
+    padding: 12px 22px;
+    letter-spacing: 0.9px;
+  }
+}
+

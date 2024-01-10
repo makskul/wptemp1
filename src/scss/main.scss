@@ -1,0 +1,62 @@
+@import "variables";
+@import "header";
+@import "banner";
+
+.container {
+  margin: 0 auto;
+  max-width: 1736px;
+  width: 100%;
+}
+
+.d-flex {
+  display: flex;
+}
+
+.d-inline-block {
+  display: inline-block;
+}
+
+.vertical-align-middle {
+  vertical-align: middle;
+}
+
+body {
+  font-family: 'Arial', sans-serif;
+  font-weight: 500;
+  margin: 0;
+}
+
+%btn {
+  background: none;
+  border-radius: 100px;
+  padding: 12px 29px;
+}
+
+.btn-dashed {
+  background: none;
+  border: 2px dashed;
+  border-radius: 100px;
+  padding: 12px 29px;
+
+  &.blue {
+    border-color: $blue;
+    color: $blue;
+  }
+
+  .big {
+    font-size: 22px;
+    line-height: 1.2;
+  }
+}
+
+.btn-simple {
+  @extend %btn;
+  border: none;
+
+  &.blue {
+    background: $blue;
+    color: #fff;
+  }
+}
+
+
