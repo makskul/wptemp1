@@ -4,8 +4,15 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link href="./dist/scss/fonts.css" rel="stylesheet">
-    <link href="main.css" rel="stylesheet">
-    <title>Vite App</title>
+    <link href="./dist/scss/main.css" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+    <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
+    <script>
+      $( function() {
+        $( "#tabs" ).tabs();
+      } );
+    </script>
+    <title>Wordpress Template</title>
   </head>
   <body>
     <header>
@@ -74,8 +81,66 @@
           <span>Залишити заявку <img src="public/order-arrow.svg"></span>
         </a>
       </section>
-      <section class="categories grey-section">
+      <section class="categories grey-section" style="margin-bottom: 104px"> <!--- temp inline style, because many variants of bottom offsets-->
         <h2 class="section-title line">Категорії Товарів</h2>
+        <div class="categories-container">
+          <div class="cat-item d-inline-block">
+            <img src="public/image2.png">
+          </div>
+          <div class="cat-item d-inline-block">
+            <img src="public/image3.png">
+          </div>
+          <div class="cat-item d-inline-block">
+            <img src="public/image4.png">
+          </div>
+          <div class="cat-item d-inline-block">
+            <img src="public/image5.png">
+          </div>
+        </div>
+        <br/>
+        <button class="btn btn-simple blue">
+          Перейти в каталог
+        </button>
+      </section >
+      <section class="examples" style="margin-bottom: 96px;">
+        <h2 class="section-title line black">Готові проекти</h2>
+        <div id="tabs">
+          <ul class="tabs-btns">
+            <li class="d-inline-block"><a href="#tabs-1" class="tabs-btn">Тераса біля ресторану</a></li>
+            <li class="d-inline-block"><a href="#tabs-2" class="tabs-btn">На балконі</a></li>
+            <li class="d-inline-block"><a href="#tabs-3" class="tabs-btn">Біля басейну</a></li>
+            <li class="d-inline-block"><a href="#tabs-3" class="tabs-btn">На пірсі</a></li>
+          </ul>
+          <div id="tabs-1" class="width-limit">
+            <div class="d-flex space-between">
+              <div class="d-inline-block">
+                <img src="public/image6.png" class="b-rounded-30" width="694" height="651">
+              </div>
+              <div class="d-inline-block tabs-text">
+                <h3 class="tabs-title">Тераса біля ресторану</h3>
+                <p class="tabs-descr mt-0"><b class="blue">Опис проекту:</b><br/>
+                  Тераса біля будинку - одне з найзатишніших місць на вашій ділянці. Тут ви можете зібратися всією родиною, провести час з друзями або бути на самоті зі своїми думками.</p>
+                <p class="tabs-descr">
+                  <b class="blue">Результат:</b><br/>
+                  Найбільш підходящою терасною дошкою, що задовольняє всі експлуатаційні характеристики та має естетичні переваги замовника, стала Bauwood Premium в сірому кольорі. Вона ідеально вписується в екстер'єр будинку та є чудовим варіантом для даного об'єкта за всіма технологічними показниками.
+                </p>
+                <button class="btn btn-simple blue big">
+                  Перейти в каталог
+                </button>
+              </div>
+            </div>
+           </div>
+          <div id="tabs-2">
+            <p class="tabs-descr">Morbi tincidunt, dui sit amet facilisis feugiat, odio metus gravida ante, ut pharetra massa metus id nunc. Duis scelerisque molestie turpis. Sed fringilla, massa eget luctus malesuada, metus eros molestie lectus, ut tempus eros massa ut dolor. Aenean aliquet fringilla sem. Suspendisse sed ligula in ligula suscipit aliquam. Praesent in eros vestibulum mi adipiscing adipiscing. Morbi facilisis. Curabitur ornare consequat nunc. Aenean vel metus. Ut posuere viverra nulla. Aliquam erat volutpat. Pellentesque convallis. Maecenas feugiat, tellus pellentesque pretium posuere, felis lorem euismod felis, eu ornare leo nisi vel felis. Mauris consectetur tortor et purus.</p>
+          </div>
+          <div id="tabs-3">
+            <p class="tabs-descr">Mauris eleifend est et turpis. Duis id erat. Suspendisse potenti. Aliquam vulputate, pede vel vehicula accumsan, mi neque rutrum erat, eu congue orci lorem eget lorem. Vestibulum non ante. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Fusce sodales. Quisque eu urna vel enim commodo pellentesque. Praesent eu risus hendrerit ligula tempus pretium. Curabitur lorem enim, pretium nec, feugiat nec, luctus a, lacus.</p>
+            <p class="tabs-descr">Duis cursus. Maecenas ligula eros, blandit nec, pharetra at, semper at, magna. Nullam ac lacus. Nulla facilisi. Praesent viverra justo vitae neque. Praesent blandit adipiscing velit. Suspendisse potenti. Donec mattis, pede vel pharetra blandit, magna ligula faucibus eros, id euismod lacus dolor eget odio. Nam scelerisque. Donec non libero sed nulla mattis commodo. Ut sagittis. Donec nisi lectus, feugiat porttitor, tempor ac, tempor vitae, pede. Aenean vehicula velit eu tellus interdum rutrum. Maecenas commodo. Pellentesque nec elit. Fusce in lacus. Vivamus a libero vitae lectus hendrerit hendrerit.</p>
+          </div>
+        </div>
+      </section>
+      <section class="bordered-section">
+
       </section>
     </div>
   </body>
