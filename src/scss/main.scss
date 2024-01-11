@@ -1,6 +1,7 @@
 @import "variables";
 @import "header";
 @import "banner";
+@import "content";
 
 .container {
   margin: 0 auto;
@@ -29,6 +30,7 @@ body {
 %btn {
   background: none;
   border-radius: 100px;
+  cursor: pointer;
   padding: 12px 29px;
 }
 
@@ -59,4 +61,34 @@ body {
   }
 }
 
+.mb-70 {
+  margin-bottom: 70px;
+}
 
+.grey-section {
+  background: $grey;
+  border-radius: 20px;
+  padding: 70px 56px;
+}
+
+.section-title {
+  color: $white;
+  text-align: center;
+  font-size: 46px;
+  margin: 0;
+  text-transform: uppercase;
+  position: relative;
+  line-height: 1;
+
+  &.line:after {
+    background: $blue;
+    bottom: -16px;
+    content: ' ';
+    display: block;
+    height: 4px;
+    width: 142px;
+    left: 50%;
+    transform: translateX(-50%);
+    position: absolute;
+  }
+}

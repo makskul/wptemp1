@@ -1,10 +1,14 @@
+.banner-section {
+  margin-bottom: 120px;
+}
+
 .banner-container {
   align-items: center;
   padding-top: 92px;
 
   .banner-image img {
     border-radius: 34px;
-    box-shadow: 0px 25px 120px 0px rgba(0, 0, 0, 0.15);
+    box-shadow: 0 25px 120px 0 rgba(0, 0, 0, 0.15);
   }
 }
 

@@ -1,0 +1,36 @@
+.order-section {
+  background: rgba(31, 34, 43, 0.12);
+  border-radius: 20px;
+  padding: 55px 98px;
+}
+
+.order {
+  background: $grey;
+  border-radius: 20px;
+  box-shadow: -43px 0px 0px 0px rgba(31, 34, 43,0.4);
+  text-decoration: none;
+  color: #ffffff;
+  display: inline-block;
+  font-weight: 600;
+  font-size: 33px;
+  line-height: 1;
+  margin-left: 37px;
+  padding: 40px 45px;
+
+  &:not(:last-child) {
+    margin-right: 54px;
+  }
+
+  &.blue {
+    box-shadow: -43px 0px 0px 0px rgba(47,128,237,0.4);
+    background: $blue;
+  }
+
+  span {
+    display: block;
+    color: rgba(225, 225, 225, 0.4);
+    font-size: 18px;
+    font-weight: 500;
+    margin-top: 4px;
+  }
+}
