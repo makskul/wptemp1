@@ -51,3 +51,44 @@
   margin: 0 auto;
   display: block;
 }
+
+.white-block-holder {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 50px;
+  margin-top: 44px;
+}
+
+.white-block {
+  box-sizing: border-box;
+  background: $white;
+  border-radius: 10px;
+  padding: 30px 38px 43px;
+  margin-right: 34px;
+  width: 25%;
+
+  &:last-child {
+    margin-right: 0;
+  }
+
+  img {
+    display: block;
+    margin-bottom: 26px;
+  }
+
+  .title {
+    color: $dark;
+    font-size: 25.5px;
+    font-style: normal;
+    font-weight: 600;
+    margin-bottom: 14px;
+  }
+
+  .text {
+    font-size: 18px;
+  }
+}
+
+.carousel {
+  padding: 4px 134px;
+}

@@ -3,6 +3,8 @@
 @import "banner";
 @import "tabs";
 @import "content";
+@import "forms";
+@import "slick-carousel";
 
 .container {
   margin: 0 auto;
@@ -34,8 +36,24 @@
   border-radius: 30px;
 }
 
-.blue {
+.text-center {
+  text-align: center;
+}
+
+.mb-0 {
+  margin-bottom: 0;
+}
+
+.mb-15 {
+  margin-bottom: 15px;
+}
+
+.color-blue {
   color: $blue;
+}
+
+.color-dark {
+  color: $dark !important;
 }
 
 .mt-0 {
@@ -128,4 +146,9 @@ body {
   &.black {
     color: $dark;
   }
+}
+
+.section-sub-title {
+  color: $white;
+  font-size: 29px;
 }

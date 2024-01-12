@@ -10,8 +10,18 @@
     <script>
       $( function() {
         $( "#tabs" ).tabs();
+
+        $(".carousel").slick({
+          dots: false,
+          infinite: true,
+          slidesToShow: 5,
+          slidesToScroll: 3,
+          variableWidth: true
+        });
       } );
+
     </script>
+    <script src="./slick/slick.js?v2022" type="text/javascript" charset="utf-8"></script>
     <title>Wordpress Template</title>
   </head>
   <body>
@@ -118,10 +128,10 @@
               </div>
               <div class="d-inline-block tabs-text">
                 <h3 class="tabs-title">Тераса біля ресторану</h3>
-                <p class="tabs-descr mt-0"><b class="blue">Опис проекту:</b><br/>
+                <p class="tabs-descr mt-0"><b class="color-blue">Опис проекту:</b><br/>
                   Тераса біля будинку - одне з найзатишніших місць на вашій ділянці. Тут ви можете зібратися всією родиною, провести час з друзями або бути на самоті зі своїми думками.</p>
                 <p class="tabs-descr">
-                  <b class="blue">Результат:</b><br/>
+                  <b class="color-blue">Результат:</b><br/>
                   Найбільш підходящою терасною дошкою, що задовольняє всі експлуатаційні характеристики та має естетичні переваги замовника, стала Bauwood Premium в сірому кольорі. Вона ідеально вписується в екстер'єр будинку та є чудовим варіантом для даного об'єкта за всіма технологічними показниками.
                 </p>
                 <button class="btn btn-simple blue big">
@@ -139,8 +149,103 @@
           </div>
         </div>
       </section>
-      <section class="bordered-section">
-
+      <section class="bordered-section d-flex" style="margin-bottom: 90px">
+        <div class="form-holder text-center d-inline-block">
+          <h2 class="form-title">
+            Запишіться<br/>
+            <span class="color-blue">на Консультацію</span>
+          </h2>
+          <div class="form-input-holder">
+            <input type="text" placeholder="Імя та Прізвище" class="form-input">
+          </div>
+          <div class="form-input-holder">
+            <input type="text" placeholder="Номер телефону" class="form-input">
+          </div>
+          <div class="form-input-holder">
+            <input type="text" placeholder="Email" class="form-input">
+          </div>
+          <div class="text-center" style="margin: 0 auto">
+            <label>
+              <input type="radio" name="radio-example">
+              <span class="custom-radio"></span>
+              Я підтверджую, що прочитав і погоджуюсь з умовами політики конфіденційності
+            </label>
+          </div>
+          <div style="margin-top: 30px">
+            <button class="btn btn-simple blue big">
+              Відправити заявку
+            </button>
+          </div>
+        </div>
+        <div class="d-inline-block">
+          <img src="public/image8.png" width="1010" height="609">
+        </div>
+      </section>
+      <section class="grey-section" style="margin-bottom: 85px">
+        <h2 class="section-title line" style="margin-bottom: 25px;">Переваги роботи з <span class="color-blue">ERV Group</span></h2>
+        <h3 class="section-sub-title text-center">Чому нам довіряють?</h3>
+        <div class="white-block-holder">
+          <div class="white-block">
+            <img src="public/image9.png">
+            <h3 class="title">Доставка по Україні</h3>
+            <div class="text">
+              Ми здійснюємо надійну доставку терасових систем і інших матеріалів безкоштовно по Києву та Київській області, а також по всій Україні
+            </div>
+          </div>
+          <div class="white-block">
+            <img src="public/image10.png">
+            <h3 class="title">Гарантія на матеріали</h3>
+            <div class="text">
+              У нас тільки якісна продукція та перевірені постачальники
+            </div>
+          </div>
+          <div class="white-block">
+            <img src="public/image11.png">
+            <h3 class="title">Гарантія на монтаж</h3>
+            <div class="text">
+              Всі монтажні роботи виконуються виключно штатними майстрами компанії
+            </div>
+          </div>
+          <div class="white-block">
+            <img src="public/image12.png">
+            <h3 class="title">Обслуговування</h3>
+            <div class="text">
+              Ви завжди можете звернутися в сервісний центр, для гарантійного обслуговування
+            </div>
+          </div>
+        </div>
+        <div class="text-center" style="margin-top: 30px">
+          <button class="btn btn-simple blue big">
+            Перейти в каталог
+          </button>
+        </div>
+      </section>
+      <section class="transparent-section">
+        <h2 class="section-title color-dark line" style="margin-bottom: 25px;">Нашими <span class="color-blue">клієнтами</span> стали</h2>
+        <h3 class="section-sub-title color-dark text-center mb-15">Ми будуємо приватні та комерційні об'єкти</h3>
+        
+        <div class="carousel-holder">
+          <div class="carousel">
+            <a href="https://localhost">
+              <img src="public/logo1.png">
+            </a>
+            <a href="https://localhost">
+              <img src="public/logo2.png">
+            </a>
+            <a href="https://localhost">
+              <img src="public/logo3.png">
+            </a>
+            <a href="https://localhost">
+              <img src="public/logo4.png">
+            </a>
+            <a href="https://localhost">
+              <img src="public/logo5.png">
+            </a>
+            <a href="https://localhost">
+              <img src="public/logo6.png">
+            </a>
+          </div>
+        </div>
       </section>
     </div>
   </body>
