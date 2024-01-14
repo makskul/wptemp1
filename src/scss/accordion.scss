@@ -1,0 +1,63 @@
+.accordion-holder {
+  width: 1252px;
+  margin: 0 auto;
+}
+
+.accordion {
+  border: 3px solid $grey;
+  border-radius: 18px;
+  color: $grey;
+  position: relative;
+  margin-bottom: 20px; /* Нижний отступ между элементами аккордеона */
+  padding: 33px 64px;
+
+  &.active {
+    background-color: $grey;
+    color: $white;
+  }
+
+  &:last-child {
+    margin-bottom: 0; /* Для последнего элемента нижний отступ убираем */
+  }
+
+  .label {
+    position: relative;
+    cursor: pointer; /* Меняем курсор при наведении */
+    font-size: 32px;
+    font-weight: 600;
+    line-height: 1;
+  }
+
+  .label::after {
+    content: "+"; /* Задаем иконку "+" для элемента аккордеона */
+    position: absolute;
+    top: 50%; /* Выравнивание по центру */
+    transform: translateY(-50%);
+    right: 0;
+    font-size: 25px;
+    font-weight: bold;
+  }
+
+  &.active .label {
+    margin-bottom: 22px;
+  }
+
+  &.active .label::after {
+    content: "\2014"; /* Меняем иконку на "-" при нажатии на элемент */
+  }
+
+  .content {
+    color: rgba(225,225,225, 0.8);
+    position: relative;
+    overflow: hidden;
+    font-size: 26px;
+    max-height: 0; /* Скрываем контент */
+    transition: 0.3s; /* Для плавности анимации */
+  }
+
+  p {
+    margin: 0;
+    line-height: 1.1;
+    margin-bottom: 14px;
+  }
+}

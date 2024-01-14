@@ -57,6 +57,10 @@
   justify-content: space-between;
   margin-bottom: 50px;
   margin-top: 44px;
+
+  &.posts {
+    padding: 0 95px;
+  }
 }
 
 .white-block {
@@ -86,6 +90,29 @@
 
   .text {
     font-size: 18px;
+  }
+
+  &.col-3 {
+    margin-right: 34px;
+    width: 33.33333%;
+  }
+
+  @at-root &.post {
+    margin-right: 0;
+    max-width: 444px;
+    padding-bottom: 28px;
+  }
+}
+
+.white-block.post {
+  .title {
+    margin-top: 0;
+  }
+
+  .more {
+    font-size: 16px;
+    text-decoration: none;
+    font-weight: 600;
   }
 }
 

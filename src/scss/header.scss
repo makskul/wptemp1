@@ -37,11 +37,16 @@ header {
 
   .menu-item {
     color: $dark;
+    cursor: pointer;
     display: inline-block;
     font-size: 18px;
     font-weight: bold;
     line-height: 22px;
     vertical-align: middle;
+  }
+
+  .menu-item:hover {
+    color: $blue;
   }
 
   .menu-item + img {
