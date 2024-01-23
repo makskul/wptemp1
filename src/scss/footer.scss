@@ -1,7 +1,18 @@
 .footer-row {
-  display: grid;
-  grid-template-columns: 485px 500px 500px;
   color: $white;
+
+  @media screen and (min-width: 480px) {
+    display: grid;
+    grid-template-columns: 33.3333% 33.3333% 33.3333%;
+  }
+
+  @media screen and (min-width: 1200px) {
+    grid-template-columns: 385px 400px 400px;
+  }
+
+  @media screen and (min-width: 1800px) {
+    grid-template-columns: 485px 500px 500px;
+  }
 
   &:first-child {
     margin-bottom: 80px;

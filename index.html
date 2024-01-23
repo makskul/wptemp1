@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link href="fonts.css" rel="stylesheet">
-    <link href="main.css" rel="stylesheet">
+    <link href="./dist/scss/main.css" rel="stylesheet">
     <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
     <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
     <script src="./slick/slick.js?v2022" type="text/javascript" charset="utf-8"></script>
@@ -21,7 +21,6 @@
         });
       } );
     </script>
-
     <title>Wordpress Template</title>
   </head>
   <body>
@@ -31,7 +30,7 @@
           <a class="d-inline-block logo" href="#">
             <img src="./public/logo.png" alt="Logo"/>
           </a>
-          <nav class="d-inline-block header-nav">
+          <nav class="header-nav">
             <ul>
               <li><a class="menu-item">Головна</a></li>
               <li>
@@ -45,15 +44,29 @@
               <li><a class="menu-item">Готові проекти</a></li>
               <li><a class="menu-item">Контакти</a></li>
             </ul>
+            <div class="header-contact d-mobile">
+              <div class="mt-10 mb-10 nowrap">
+                <img src="public/call.svg" alt="phone" class="d-inline-block vertical-align-middle"/>
+                <span class="d-inline-block header-phone vertical-align-middle">+38<b></b>(093)<b></b>261<b></b>28<b></b>98</span>
+              </div>
+              <div class="header-order">
+                <button class="btn btn-dashed big blue nowrap">
+                  Залишити заявку
+                </button>
+              </div>
+            </div>
           </nav>
         </div>
         <div class="header-contact d-flex">
-          <div class="d-inline-block">
+          <div class="menu-btn d-mobile js-gamburg-btn">
+            <img src="public/gamburger.svg" width="25" height="18"/>
+          </div>
+          <div class="nowrap d-desktop">
             <img src="public/call.svg" alt="phone" class="d-inline-block vertical-align-middle"/>
             <span class="d-inline-block header-phone vertical-align-middle">+38<b></b>(093)<b></b>261<b></b>28<b></b>98</span>
           </div>
-          <div class="d-inline-block header-order">
-            <button class="btn btn-dashed big blue">
+          <div class="header-order d-desktop">
+            <button class="btn btn-dashed big blue nowrap">
               Залишити заявку
             </button>
           </div>
@@ -77,379 +90,380 @@
           </div>
         </div>
       </section>
-      <section class="order-section d-flex mb-70">
-        <a href="" class="order">
-          ЗАМОВИТИ ЗРАЗКИ
-          <span>Залишити заявку <img src="public/order-arrow.svg"></span>
-        </a>
-        <a href="" class="order blue">
-          ЗАМОВИТИ РОЗРАХУНОК
-          <span>Залишити заявку <img src="public/order-arrow.svg"></span>
-        </a>
-        <a href="" class="order">
-          ЗАМОВИТИ ЗАМІР
-          <span>Залишити заявку <img src="public/order-arrow.svg"></span>
-        </a>
-      </section>
-      <section class="categories grey-section" style="margin-bottom: 104px"> <!--- temp inline style, because many variants of bottom offsets-->
-        <h2 class="section-title line">Категорії Товарів</h2>
-        <div class="categories-container">
-          <div class="cat-item d-inline-block">
-            <img src="public/image2.png">
-          </div>
-          <div class="cat-item d-inline-block">
-            <img src="public/image3.png">
-          </div>
-          <div class="cat-item d-inline-block">
-            <img src="public/image4.png">
-          </div>
-          <div class="cat-item d-inline-block">
-            <img src="public/image5.png">
-          </div>
-        </div>
-        <br/>
-        <button class="btn btn-simple blue">
-          Перейти в каталог
-        </button>
-      </section >
-      <section class="examples" style="margin-bottom: 96px;">
-        <h2 class="section-title line black">Готові проекти</h2>
-        <div id="tabs">
-          <ul class="tabs-btns">
-            <li class="d-inline-block"><a href="#tabs-1" class="tabs-btn">Тераса біля ресторану</a></li>
-            <li class="d-inline-block"><a href="#tabs-2" class="tabs-btn">На балконі</a></li>
-            <li class="d-inline-block"><a href="#tabs-3" class="tabs-btn">Біля басейну</a></li>
-            <li class="d-inline-block"><a href="#tabs-3" class="tabs-btn">На пірсі</a></li>
-          </ul>
-          <div id="tabs-1" class="width-limit">
-            <div class="d-flex space-between">
-              <div class="d-inline-block">
-                <img src="public/image6.png" class="b-rounded-30" width="694" height="651">
-              </div>
-              <div class="d-inline-block tabs-text">
-                <h3 class="tabs-title">Тераса біля ресторану</h3>
-                <p class="tabs-descr mt-0"><b class="color-blue">Опис проекту:</b><br/>
-                  Тераса біля будинку - одне з найзатишніших місць на вашій ділянці. Тут ви можете зібратися всією родиною, провести час з друзями або бути на самоті зі своїми думками.</p>
-                <p class="tabs-descr">
-                  <b class="color-blue">Результат:</b><br/>
-                  Найбільш підходящою терасною дошкою, що задовольняє всі експлуатаційні характеристики та має естетичні переваги замовника, стала Bauwood Premium в сірому кольорі. Вона ідеально вписується в екстер'єр будинку та є чудовим варіантом для даного об'єкта за всіма технологічними показниками.
-                </p>
-                <button class="btn btn-simple blue big">
-                  Перейти в каталог
-                </button>
-              </div>
-            </div>
-           </div>
-          <div id="tabs-2">
-            <p class="tabs-descr">Morbi tincidunt, dui sit amet facilisis feugiat, odio metus gravida ante, ut pharetra massa metus id nunc. Duis scelerisque molestie turpis. Sed fringilla, massa eget luctus malesuada, metus eros molestie lectus, ut tempus eros massa ut dolor. Aenean aliquet fringilla sem. Suspendisse sed ligula in ligula suscipit aliquam. Praesent in eros vestibulum mi adipiscing adipiscing. Morbi facilisis. Curabitur ornare consequat nunc. Aenean vel metus. Ut posuere viverra nulla. Aliquam erat volutpat. Pellentesque convallis. Maecenas feugiat, tellus pellentesque pretium posuere, felis lorem euismod felis, eu ornare leo nisi vel felis. Mauris consectetur tortor et purus.</p>
-          </div>
-          <div id="tabs-3">
-            <p class="tabs-descr">Mauris eleifend est et turpis. Duis id erat. Suspendisse potenti. Aliquam vulputate, pede vel vehicula accumsan, mi neque rutrum erat, eu congue orci lorem eget lorem. Vestibulum non ante. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Fusce sodales. Quisque eu urna vel enim commodo pellentesque. Praesent eu risus hendrerit ligula tempus pretium. Curabitur lorem enim, pretium nec, feugiat nec, luctus a, lacus.</p>
-            <p class="tabs-descr">Duis cursus. Maecenas ligula eros, blandit nec, pharetra at, semper at, magna. Nullam ac lacus. Nulla facilisi. Praesent viverra justo vitae neque. Praesent blandit adipiscing velit. Suspendisse potenti. Donec mattis, pede vel pharetra blandit, magna ligula faucibus eros, id euismod lacus dolor eget odio. Nam scelerisque. Donec non libero sed nulla mattis commodo. Ut sagittis. Donec nisi lectus, feugiat porttitor, tempor ac, tempor vitae, pede. Aenean vehicula velit eu tellus interdum rutrum. Maecenas commodo. Pellentesque nec elit. Fusce in lacus. Vivamus a libero vitae lectus hendrerit hendrerit.</p>
-          </div>
-        </div>
-      </section>
-      <section class="bordered-section d-flex" style="margin-bottom: 90px">
-        <div class="form-holder text-center d-inline-block">
-          <h2 class="form-title">
-            Запишіться<br/>
-            <span class="color-blue">на Консультацію</span>
-          </h2>
-          <div class="form-input-holder">
-            <input type="text" placeholder="Імя та Прізвище" class="form-input">
-          </div>
-          <div class="form-input-holder">
-            <input type="text" placeholder="Номер телефону" class="form-input">
-          </div>
-          <div class="form-input-holder">
-            <input type="text" placeholder="Email" class="form-input">
-          </div>
-          <div class="text-center" style="margin: 0 auto">
-            <label>
-              <input type="radio" name="radio-example">
-              <span class="custom-radio"></span>
-              Я підтверджую, що прочитав і погоджуюсь з умовами політики конфіденційності
-            </label>
-          </div>
-          <div style="margin-top: 30px">
-            <button class="btn btn-simple blue big">
-              Відправити заявку
-            </button>
-          </div>
-        </div>
-        <div class="d-inline-block">
-          <img src="public/image8.png" width="1010" height="609">
-        </div>
-      </section>
-      <section class="grey-section" style="margin-bottom: 85px">
-        <h2 class="section-title line" style="margin-bottom: 25px;">Переваги роботи з <span class="color-blue">ERV Group</span></h2>
-        <h3 class="section-sub-title text-center">Чому нам довіряють?</h3>
-        <div class="white-block-holder">
-          <div class="white-block">
-            <img src="public/image9.png">
-            <h3 class="title">Доставка по Україні</h3>
-            <div class="text">
-              Ми здійснюємо надійну доставку терасових систем і інших матеріалів безкоштовно по Києву та Київській області, а також по всій Україні
-            </div>
-          </div>
-          <div class="white-block">
-            <img src="public/image10.png">
-            <h3 class="title">Гарантія на матеріали</h3>
-            <div class="text">
-              У нас тільки якісна продукція та перевірені постачальники
-            </div>
-          </div>
-          <div class="white-block">
-            <img src="public/image11.png">
-            <h3 class="title">Гарантія на монтаж</h3>
-            <div class="text">
-              Всі монтажні роботи виконуються виключно штатними майстрами компанії
-            </div>
-          </div>
-          <div class="white-block">
-            <img src="public/image12.png">
-            <h3 class="title">Обслуговування</h3>
-            <div class="text">
-              Ви завжди можете звернутися в сервісний центр, для гарантійного обслуговування
-            </div>
-          </div>
-        </div>
-        <div class="text-center" style="margin-top: 30px">
-          <button class="btn btn-simple blue big">
-            Перейти в каталог
-          </button>
-        </div>
-      </section>
-      <section class="section-transparent" style="margin-bottom: 77px;">
-        <h2 class="section-title color-dark line" style="margin-bottom: 25px;">Нашими <span class="color-blue">клієнтами</span> стали</h2>
-        <h3 class="section-sub-title color-dark text-center mb-15">Ми будуємо приватні та комерційні об'єкти</h3>
-        
-        <div class="carousel-holder">
-          <div class="carousel">
-            <a href="https://localhost">
-              <img src="public/logo1.png">
-            </a>
-            <a href="https://localhost">
-              <img src="public/logo2.png">
-            </a>
-            <a href="https://localhost">
-              <img src="public/logo3.png">
-            </a>
-            <a href="https://localhost">
-              <img src="public/logo4.png">
-            </a>
-            <a href="https://localhost">
-              <img src="public/logo5.png">
-            </a>
-            <a href="https://localhost">
-              <img src="public/logo6.png">
-            </a>
-          </div>
-        </div>
-      </section>
-      <section class="section-transparent" style="margin-bottom: 100px">
-        <h2 class="section-title color-dark line">Популярні <span class="color-blue">питання (FAQ)</span></h2>
-        <div class="accordion-holder">
-          <div class="accordion">
-            <div class="label">Що таке клінінг терасної дошки?</div>
-            <div class="content">
-              <p>
-                Клінінг - це прибирання терасного настилу групою фахівців, із застосуванням потрібних засобів, які не пошкодять матеріал, і зроблять терасу доглянутою та красивою.
-                Для різних матеріалів застосовуються різні види прибирання та догляду за терасою, наприклад, крім чищення, натуральне та термодерево
-              </p>
-            </div>
-          </div>
-          <div class="accordion">
-            <div class="label">Ремонт та реставрація тераси</div>
-            <div class="content">
-              <p>
-                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Esse
-                adipisci ex impedit itaque labore. Dolorum tempore ipsum autem
-                molestias corrupti possimus voluptate, quos accusamus esse maiores
-                dolorem qui eaque facilis nemo nulla, amet excepturi laborum eveniet
-                eligendi aperiam nostrum culpa. Possimus architecto saepe quidem
-                quam molestiae! Incidunt deleniti quas dolore temporibus nisi
-                voluptates non dolores excepturi dicta ducimus asperiores quam,
-                neque totam ratione reiciendis consequatur a quasi inventore vero
-                doloribus commodi? Dolorem consequatur laborum blanditiis.
-              </p>
-            </div>
-          </div>
-          <div class="accordion">
-            <div class="label">Чим відрізняються між собою матеріали терасної дошки?</div>
-            <div class="content">
-              <p>
-                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Esse
-                adipisci ex impedit itaque labore. Dolorum tempore ipsum autem
-                molestias corrupti possimus voluptate, quos accusamus esse maiores
-                dolorem qui eaque facilis nemo nulla, amet excepturi laborum eveniet
-                eligendi aperiam nostrum culpa. Possimus architecto saepe quidem
-                quam molestiae! Incidunt deleniti quas dolore temporibus nisi
-                voluptates non dolores excepturi dicta ducimus asperiores quam,
-                neque totam ratione reiciendis consequatur a quasi inventore vero
-                doloribus commodi? Dolorem consequatur laborum blanditiis.
-              </p>
-            </div>
-          </div>
-          <div class="accordion">
-            <div class="label">Як вибрати комплектуючі для терас?</div>
-            <div class="content">
-              <p>
-                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Esse
-                adipisci ex impedit itaque labore. Dolorum tempore ipsum autem
-                molestias corrupti possimus voluptate, quos accusamus esse maiores
-                dolorem qui eaque facilis nemo nulla, amet excepturi laborum eveniet
-                eligendi aperiam nostrum culpa. Possimus architecto saepe quidem
-                quam molestiae! Incidunt deleniti quas dolore temporibus nisi
-                voluptates non dolores excepturi dicta ducimus asperiores quam,
-                neque totam ratione reiciendis consequatur a quasi inventore vero
-                doloribus commodi? Dolorem consequatur laborum blanditiis.
-              </p>
-            </div>
-          </div>
-          <div class="accordion">
-            <div class="label">У чому різниця різних поверхонь дошки?</div>
-            <div class="content">
-              <p>
-                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Esse
-                adipisci ex impedit itaque labore. Dolorum tempore ipsum autem
-                molestias corrupti possimus voluptate, quos accusamus esse maiores
-                dolorem qui eaque facilis nemo nulla, amet excepturi laborum eveniet
-                eligendi aperiam nostrum culpa. Possimus architecto saepe quidem
-                quam molestiae! Incidunt deleniti quas dolore temporibus nisi
-                voluptates non dolores excepturi dicta ducimus asperiores quam,
-                neque totam ratione reiciendis consequatur a quasi inventore vero
-                doloribus commodi? Dolorem consequatur laborum blanditiis.
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
-      <section class="grey-section" style="margin-bottom: 45px">
-        <h2 class="section-title line" style="margin-bottom: 25px;">Статті та новини</h2>
-        <h3 class="section-sub-title text-center">Корисна інформація</h3>
-        <div class="white-block-holder posts">
-          <article class="white-block col-3 post">
-            <img src="public/image13.png">
-            <h3 class="title">Догляд за терасною дошкою</h3>
-            <div class="text">
-              Незважаючи на невибагливість терасної дошки до зовнішніх негативних факторів, зважаючи на... <a href="#" class="more color-blue">Читати далі</a>
-            </div>
-          </article>
-          <article class="white-block col-3 post">
-            <img src="public/image13.png">
-            <h3 class="title">Догляд за терасною дошкою</h3>
-            <div class="text">
-              Незважаючи на невибагливість терасної дошки до зовнішніх негативних факторів, зважаючи на... <a href="#" class="more color-blue">Читати далі</a>
-            </div>
-          </article>
-          <article class="white-block col-3 post">
-            <img src="public/image13.png">
-            <h3 class="title">Догляд за терасною дошкою</h3>
-            <div class="text">
-              Незважаючи на невибагливість терасної дошки до зовнішніх негативних факторів, зважаючи на... <a href="#" class="more color-blue">Читати далі</a>
-            </div>
-          </article>
-        </div>
-        <div class="text-center" style="margin-top: 30px">
-          <button class="btn btn-simple blue big">
-            Більше статей
-          </button>
-        </div>
-      </section>
-      <section class="transparent d-flex" style="margin-bottom: 60px">
-        <div class="d-inline-block">
-          <img src="public/image8.png" width="1010" height="609">
-        </div>
-        <div class="form-holder text-center d-inline-block" style="padding: 46px 40px 0 106px;">
-          <h2 class="form-title">
-            Запишіться<br/>
-            <span class="color-blue">на Консультацію</span>
-          </h2>
-          <div class="form-input-holder">
-            <input type="text" placeholder="Імя та Прізвище" class="form-input">
-          </div>
-          <div class="form-input-holder">
-            <input type="text" placeholder="Номер телефону" class="form-input">
-          </div>
-          <div class="form-input-holder">
-            <input type="text" placeholder="Email" class="form-input">
-          </div>
-          <div class="text-center" style="margin: 0 auto">
-            <label>
-              <input type="radio" name="radio-example">
-              <span class="custom-radio"></span>
-              Я підтверджую, що прочитав і погоджуюсь з умовами політики конфіденційності
-            </label>
-          </div>
-          <div style="margin-top: 30px">
-            <button class="btn btn-simple blue big">
-              Відправити заявку
-            </button>
-          </div>
-        </div>
-      </section>
-      <footer class="grey-section">
-        <div class="footer-row">
-          <div class="footer-logos">
-            <ul class="footer-socials">
-              <li class="item"><a href=""><img src="public/Instagram.svg"/> </a> </li>
-              <li class="item"><a href=""><img src="public/Facebook.svg"/> </a> </li>
-              <li class="item"><a href=""><img src="public/Viber.svg"/> </a> </li>
-            </ul>
-          </div>
-          <div class="footer-column">
-            <h4 class="footer-title">
-              Відділ продажу
-            </h4>
-            <div class="footer-label">
-              Email
-            </div>
-            <div class="footer-txt">
-              sales@netronic.com.ua
-            </div>
-            <div class="footer-label">
-              Телефон
-            </div>
-            <div class="footer-txt">
-              +38 (093) 332-38-43
-            </div>
-          </div>
-          <div class="footer-column">
-            <h4 class="footer-title">
-              Технічна підтримка
-            </h4>
-            <div class="footer-label">
-              Email
-            </div>
-            <div class="footer-txt">
-              sales@netronic.com.ua
-            </div>
-            <div class="footer-label">
-              Телефон
-            </div>
-            <div class="footer-txt">
-              +38 (093) 332-38-43
-            </div>
-          </div>
-        </div>
-        <div class="footer-row">
-          <div class="footer-logos">
-            &nbsp;
-          </div>
-          <div class="footer-column">
-            <span class="footer-tiny-txt">
-              Політика конфіденційності
-            </span>
-          </div>
-          <div class="footer-column">
-             <span class="footer-tiny-txt">
-              Copyright © 2023 All Rights Reserved.
-            </span>
-          </div>
-        </div>
-      </footer>
+<!--      <section class="order-section d-flex mb-70">-->
+<!--        <a href="" class="order">-->
+<!--          ЗАМОВИТИ ЗРАЗКИ-->
+<!--          <span>Залишити заявку <img src="public/order-arrow.svg"></span>-->
+<!--        </a>-->
+<!--        <a href="" class="order blue">-->
+<!--          ЗАМОВИТИ РОЗРАХУНОК-->
+<!--          <span>Залишити заявку <img src="public/order-arrow.svg"></span>-->
+<!--        </a>-->
+<!--        <a href="" class="order">-->
+<!--          ЗАМОВИТИ ЗАМІР-->
+<!--          <span>Залишити заявку <img src="public/order-arrow.svg"></span>-->
+<!--        </a>-->
+<!--      </section>-->
+<!--      <section class="categories grey-section" style="margin-bottom: 104px"> &lt;!&ndash;- temp inline style, because many variants of bottom offsets&ndash;&gt;-->
+<!--        <h2 class="section-title line">Категорії Товарів</h2>-->
+<!--        <div class="categories-container">-->
+<!--          <div class="cat-item d-inline-block">-->
+<!--            <img src="public/image2.png">-->
+<!--          </div>-->
+<!--          <div class="cat-item d-inline-block">-->
+<!--            <img src="public/image3.png">-->
+<!--          </div>-->
+<!--          <div class="cat-item d-inline-block">-->
+<!--            <img src="public/image4.png">-->
+<!--          </div>-->
+<!--          <div class="cat-item d-inline-block">-->
+<!--            <img src="public/image5.png">-->
+<!--          </div>-->
+<!--        </div>-->
+<!--        <br/>-->
+<!--        <button class="btn btn-simple blue">-->
+<!--          Перейти в каталог-->
+<!--        </button>-->
+<!--      </section >-->
+<!--      <section class="examples" style="margin-bottom: 96px;">-->
+<!--        <h2 class="section-title line black">Готові проекти</h2>-->
+<!--        <div id="tabs">-->
+<!--          <ul class="tabs-btns">-->
+<!--            <li class="d-inline-block"><a href="#tabs-1" class="tabs-btn">Тераса біля ресторану</a></li>-->
+<!--            <li class="d-inline-block"><a href="#tabs-2" class="tabs-btn">На балконі</a></li>-->
+<!--            <li class="d-inline-block"><a href="#tabs-3" class="tabs-btn">Біля басейну</a></li>-->
+<!--            <li class="d-inline-block"><a href="#tabs-3" class="tabs-btn">На пірсі</a></li>-->
+<!--          </ul>-->
+<!--          <div id="tabs-1" class="width-limit">-->
+<!--            <div class="d-flex space-between">-->
+<!--              <div class="d-inline-block">-->
+<!--                <img src="public/image6.png" class="b-rounded-30" width="694" height="651">-->
+<!--              </div>-->
+<!--              <div class="d-inline-block tabs-text">-->
+<!--                <h3 class="tabs-title">Тераса біля ресторану</h3>-->
+<!--                <p class="tabs-descr mt-0"><b class="color-blue">Опис проекту:</b><br/>-->
+<!--                  Тераса біля будинку - одне з найзатишніших місць на вашій ділянці. Тут ви можете зібратися всією родиною, провести час з друзями або бути на самоті зі своїми думками.</p>-->
+<!--                <p class="tabs-descr">-->
+<!--                  <b class="color-blue">Результат:</b><br/>-->
+<!--                  Найбільш підходящою терасною дошкою, що задовольняє всі експлуатаційні характеристики та має естетичні переваги замовника, стала Bauwood Premium в сірому кольорі. Вона ідеально вписується в екстер'єр будинку та є чудовим варіантом для даного об'єкта за всіма технологічними показниками.-->
+<!--                </p>-->
+<!--                <button class="btn btn-simple blue big">-->
+<!--                  Перейти в каталог-->
+<!--                </button>-->
+<!--              </div>-->
+<!--            </div>-->
+<!--           </div>-->
+<!--          <div id="tabs-2">-->
+<!--            <p class="tabs-descr">Morbi tincidunt, dui sit amet facilisis feugiat, odio metus gravida ante, ut pharetra massa metus id nunc. Duis scelerisque molestie turpis. Sed fringilla, massa eget luctus malesuada, metus eros molestie lectus, ut tempus eros massa ut dolor. Aenean aliquet fringilla sem. Suspendisse sed ligula in ligula suscipit aliquam. Praesent in eros vestibulum mi adipiscing adipiscing. Morbi facilisis. Curabitur ornare consequat nunc. Aenean vel metus. Ut posuere viverra nulla. Aliquam erat volutpat. Pellentesque convallis. Maecenas feugiat, tellus pellentesque pretium posuere, felis lorem euismod felis, eu ornare leo nisi vel felis. Mauris consectetur tortor et purus.</p>-->
+<!--          </div>-->
+<!--          <div id="tabs-3">-->
+<!--            <p class="tabs-descr">Mauris eleifend est et turpis. Duis id erat. Suspendisse potenti. Aliquam vulputate, pede vel vehicula accumsan, mi neque rutrum erat, eu congue orci lorem eget lorem. Vestibulum non ante. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Fusce sodales. Quisque eu urna vel enim commodo pellentesque. Praesent eu risus hendrerit ligula tempus pretium. Curabitur lorem enim, pretium nec, feugiat nec, luctus a, lacus.</p>-->
+<!--            <p class="tabs-descr">Duis cursus. Maecenas ligula eros, blandit nec, pharetra at, semper at, magna. Nullam ac lacus. Nulla facilisi. Praesent viverra justo vitae neque. Praesent blandit adipiscing velit. Suspendisse potenti. Donec mattis, pede vel pharetra blandit, magna ligula faucibus eros, id euismod lacus dolor eget odio. Nam scelerisque. Donec non libero sed nulla mattis commodo. Ut sagittis. Donec nisi lectus, feugiat porttitor, tempor ac, tempor vitae, pede. Aenean vehicula velit eu tellus interdum rutrum. Maecenas commodo. Pellentesque nec elit. Fusce in lacus. Vivamus a libero vitae lectus hendrerit hendrerit.</p>-->
+<!--          </div>-->
+<!--        </div>-->
+<!--      </section>-->
+<!--      <section class="bordered-section d-flex" style="margin-bottom: 90px">-->
+<!--        <div class="form-holder text-center d-inline-block">-->
+<!--          <h2 class="form-title">-->
+<!--            Запишіться<br/>-->
+<!--            <span class="color-blue">на Консультацію</span>-->
+<!--          </h2>-->
+<!--          <div class="form-input-holder">-->
+<!--            <input type="text" placeholder="Імя та Прізвище" class="form-input">-->
+<!--          </div>-->
+<!--          <div class="form-input-holder">-->
+<!--            <input type="text" placeholder="Номер телефону" class="form-input">-->
+<!--          </div>-->
+<!--          <div class="form-input-holder">-->
+<!--            <input type="text" placeholder="Email" class="form-input">-->
+<!--          </div>-->
+<!--          <div class="text-center" style="margin: 0 auto">-->
+<!--            <label>-->
+<!--              <input type="radio" name="radio-example">-->
+<!--              <span class="custom-radio"></span>-->
+<!--              Я підтверджую, що прочитав і погоджуюсь з умовами політики конфіденційності-->
+<!--            </label>-->
+<!--          </div>-->
+<!--          <div style="margin-top: 30px">-->
+<!--            <button class="btn btn-simple blue big">-->
+<!--              Відправити заявку-->
+<!--            </button>-->
+<!--          </div>-->
+<!--        </div>-->
+<!--        <div class="d-inline-block">-->
+<!--          <img src="public/image8.png" width="1010" height="609">-->
+<!--        </div>-->
+<!--      </section>-->
+<!--      <section class="grey-section" style="margin-bottom: 85px">-->
+<!--        <h2 class="section-title line" style="margin-bottom: 25px;">Переваги роботи з <span class="color-blue">ERV Group</span></h2>-->
+<!--        <h3 class="section-sub-title text-center">Чому нам довіряють?</h3>-->
+<!--        <div class="white-block-holder">-->
+<!--          <div class="white-block">-->
+<!--            <img src="public/image9.png">-->
+<!--            <h3 class="title">Доставка по Україні</h3>-->
+<!--            <div class="text">-->
+<!--              Ми здійснюємо надійну доставку терасових систем і інших матеріалів безкоштовно по Києву та Київській області, а також по всій Україні-->
+<!--            </div>-->
+<!--          </div>-->
+<!--          <div class="white-block">-->
+<!--            <img src="public/image10.png">-->
+<!--            <h3 class="title">Гарантія на матеріали</h3>-->
+<!--            <div class="text">-->
+<!--              У нас тільки якісна продукція та перевірені постачальники-->
+<!--            </div>-->
+<!--          </div>-->
+<!--          <div class="white-block">-->
+<!--            <img src="public/image11.png">-->
+<!--            <h3 class="title">Гарантія на монтаж</h3>-->
+<!--            <div class="text">-->
+<!--              Всі монтажні роботи виконуються виключно штатними майстрами компанії-->
+<!--            </div>-->
+<!--          </div>-->
+<!--          <div class="white-block">-->
+<!--            <img src="public/image12.png">-->
+<!--            <h3 class="title">Обслуговування</h3>-->
+<!--            <div class="text">-->
+<!--              Ви завжди можете звернутися в сервісний центр, для гарантійного обслуговування-->
+<!--            </div>-->
+<!--          </div>-->
+<!--        </div>-->
+<!--        <div class="text-center" style="margin-top: 30px">-->
+<!--          <button class="btn btn-simple blue big">-->
+<!--            Перейти в каталог-->
+<!--          </button>-->
+<!--        </div>-->
+<!--      </section>-->
+<!--      <section class="section-transparent" style="margin-bottom: 77px;">-->
+<!--        <h2 class="section-title color-dark line" style="margin-bottom: 25px;">Нашими <span class="color-blue">клієнтами</span> стали</h2>-->
+<!--        <h3 class="section-sub-title color-dark text-center mb-15">Ми будуємо приватні та комерційні об'єкти</h3>-->
+<!--        -->
+<!--        <div class="carousel-holder">-->
+<!--          <div class="carousel">-->
+<!--            <a href="https://localhost">-->
+<!--              <img src="public/logo1.png">-->
+<!--            </a>-->
+<!--            <a href="https://localhost">-->
+<!--              <img src="public/logo2.png">-->
+<!--            </a>-->
+<!--            <a href="https://localhost">-->
+<!--              <img src="public/logo3.png">-->
+<!--            </a>-->
+<!--            <a href="https://localhost">-->
+<!--              <img src="public/logo4.png">-->
+<!--            </a>-->
+<!--            <a href="https://localhost">-->
+<!--              <img src="public/logo5.png">-->
+<!--            </a>-->
+<!--            <a href="https://localhost">-->
+<!--              <img src="public/logo6.png">-->
+<!--            </a>-->
+<!--          </div>-->
+<!--        </div>-->
+<!--      </section>-->
+<!--      <section class="section-transparent" style="margin-bottom: 100px">-->
+<!--        <h2 class="section-title color-dark line">Популярні <span class="color-blue">питання (FAQ)</span></h2>-->
+<!--        <div class="accordion-holder">-->
+<!--          <div class="accordion">-->
+<!--            <div class="label">Що таке клінінг терасної дошки?</div>-->
+<!--            <div class="content">-->
+<!--              <p>-->
+<!--                Клінінг - це прибирання терасного настилу групою фахівців, із застосуванням потрібних засобів, які не пошкодять матеріал, і зроблять терасу доглянутою та красивою.-->
+<!--                Для різних матеріалів застосовуються різні види прибирання та догляду за терасою, наприклад, крім чищення, натуральне та термодерево-->
+<!--              </p>-->
+<!--            </div>-->
+<!--          </div>-->
+<!--          <div class="accordion">-->
+<!--            <div class="label">Ремонт та реставрація тераси</div>-->
+<!--            <div class="content">-->
+<!--              <p>-->
+<!--                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Esse-->
+<!--                adipisci ex impedit itaque labore. Dolorum tempore ipsum autem-->
+<!--                molestias corrupti possimus voluptate, quos accusamus esse maiores-->
+<!--                dolorem qui eaque facilis nemo nulla, amet excepturi laborum eveniet-->
+<!--                eligendi aperiam nostrum culpa. Possimus architecto saepe quidem-->
+<!--                quam molestiae! Incidunt deleniti quas dolore temporibus nisi-->
+<!--                voluptates non dolores excepturi dicta ducimus asperiores quam,-->
+<!--                neque totam ratione reiciendis consequatur a quasi inventore vero-->
+<!--                doloribus commodi? Dolorem consequatur laborum blanditiis.-->
+<!--              </p>-->
+<!--            </div>-->
+<!--          </div>-->
+<!--          <div class="accordion">-->
+<!--            <div class="label">Чим відрізняються між собою матеріали терасної дошки?</div>-->
+<!--            <div class="content">-->
+<!--              <p>-->
+<!--                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Esse-->
+<!--                adipisci ex impedit itaque labore. Dolorum tempore ipsum autem-->
+<!--                molestias corrupti possimus voluptate, quos accusamus esse maiores-->
+<!--                dolorem qui eaque facilis nemo nulla, amet excepturi laborum eveniet-->
+<!--                eligendi aperiam nostrum culpa. Possimus architecto saepe quidem-->
+<!--                quam molestiae! Incidunt deleniti quas dolore temporibus nisi-->
+<!--                voluptates non dolores excepturi dicta ducimus asperiores quam,-->
+<!--                neque totam ratione reiciendis consequatur a quasi inventore vero-->
+<!--                doloribus commodi? Dolorem consequatur laborum blanditiis.-->
+<!--              </p>-->
+<!--            </div>-->
+<!--          </div>-->
+<!--          <div class="accordion">-->
+<!--            <div class="label">Як вибрати комплектуючі для терас?</div>-->
+<!--            <div class="content">-->
+<!--              <p>-->
+<!--                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Esse-->
+<!--                adipisci ex impedit itaque labore. Dolorum tempore ipsum autem-->
+<!--                molestias corrupti possimus voluptate, quos accusamus esse maiores-->
+<!--                dolorem qui eaque facilis nemo nulla, amet excepturi laborum eveniet-->
+<!--                eligendi aperiam nostrum culpa. Possimus architecto saepe quidem-->
+<!--                quam molestiae! Incidunt deleniti quas dolore temporibus nisi-->
+<!--                voluptates non dolores excepturi dicta ducimus asperiores quam,-->
+<!--                neque totam ratione reiciendis consequatur a quasi inventore vero-->
+<!--                doloribus commodi? Dolorem consequatur laborum blanditiis.-->
+<!--              </p>-->
+<!--            </div>-->
+<!--          </div>-->
+<!--          <div class="accordion">-->
+<!--            <div class="label">У чому різниця різних поверхонь дошки?</div>-->
+<!--            <div class="content">-->
+<!--              <p>-->
+<!--                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Esse-->
+<!--                adipisci ex impedit itaque labore. Dolorum tempore ipsum autem-->
+<!--                molestias corrupti possimus voluptate, quos accusamus esse maiores-->
+<!--                dolorem qui eaque facilis nemo nulla, amet excepturi laborum eveniet-->
+<!--                eligendi aperiam nostrum culpa. Possimus architecto saepe quidem-->
+<!--                quam molestiae! Incidunt deleniti quas dolore temporibus nisi-->
+<!--                voluptates non dolores excepturi dicta ducimus asperiores quam,-->
+<!--                neque totam ratione reiciendis consequatur a quasi inventore vero-->
+<!--                doloribus commodi? Dolorem consequatur laborum blanditiis.-->
+<!--              </p>-->
+<!--            </div>-->
+<!--          </div>-->
+<!--        </div>-->
+<!--      </section>-->
+<!--      <section class="grey-section" style="margin-bottom: 45px">-->
+<!--        <h2 class="section-title line" style="margin-bottom: 25px;">Статті та новини</h2>-->
+<!--        <h3 class="section-sub-title text-center">Корисна інформація</h3>-->
+<!--        <div class="white-block-holder posts">-->
+<!--          <article class="white-block col-3 post">-->
+<!--            <img src="public/image13.png">-->
+<!--            <h3 class="title">Догляд за терасною дошкою</h3>-->
+<!--            <div class="text">-->
+<!--              Незважаючи на невибагливість терасної дошки до зовнішніх негативних факторів, зважаючи на... <a href="#" class="more color-blue">Читати далі</a>-->
+<!--            </div>-->
+<!--          </article>-->
+<!--          <article class="white-block col-3 post">-->
+<!--            <img src="public/image13.png">-->
+<!--            <h3 class="title">Догляд за терасною дошкою</h3>-->
+<!--            <div class="text">-->
+<!--              Незважаючи на невибагливість терасної дошки до зовнішніх негативних факторів, зважаючи на... <a href="#" class="more color-blue">Читати далі</a>-->
+<!--            </div>-->
+<!--          </article>-->
+<!--          <article class="white-block col-3 post">-->
+<!--            <img src="public/image13.png">-->
+<!--            <h3 class="title">Догляд за терасною дошкою</h3>-->
+<!--            <div class="text">-->
+<!--              Незважаючи на невибагливість терасної дошки до зовнішніх негативних факторів, зважаючи на... <a href="#" class="more color-blue">Читати далі</a>-->
+<!--            </div>-->
+<!--          </article>-->
+<!--        </div>-->
+<!--        <div class="text-center" style="margin-top: 30px">-->
+<!--          <button class="btn btn-simple blue big">-->
+<!--            Більше статей-->
+<!--          </button>-->
+<!--        </div>-->
+<!--      </section>-->
+<!--      <section class="transparent d-flex" style="margin-bottom: 60px">-->
+<!--        <div class="d-inline-block">-->
+<!--          <img src="public/image8.png" width="1010" height="609">-->
+<!--        </div>-->
+<!--        <div class="form-holder text-center d-inline-block" style="padding: 46px 40px 0 106px;">-->
+<!--          <h2 class="form-title">-->
+<!--            Запишіться<br/>-->
+<!--            <span class="color-blue">на Консультацію</span>-->
+<!--          </h2>-->
+<!--          <div class="form-input-holder">-->
+<!--            <input type="text" placeholder="Імя та Прізвище" class="form-input">-->
+<!--          </div>-->
+<!--          <div class="form-input-holder">-->
+<!--            <input type="text" placeholder="Номер телефону" class="form-input">-->
+<!--          </div>-->
+<!--          <div class="form-input-holder">-->
+<!--            <input type="text" placeholder="Email" class="form-input">-->
+<!--          </div>-->
+<!--          <div class="text-center" style="margin: 0 auto">-->
+<!--            <label>-->
+<!--              <input type="radio" name="radio-example">-->
+<!--              <span class="custom-radio"></span>-->
+<!--              Я підтверджую, що прочитав і погоджуюсь з умовами політики конфіденційності-->
+<!--            </label>-->
+<!--          </div>-->
+<!--          <div style="margin-top: 30px">-->
+<!--            <button class="btn btn-simple blue big">-->
+<!--              Відправити заявку-->
+<!--            </button>-->
+<!--          </div>-->
+<!--        </div>-->
+<!--      </section>-->
+<!--      <footer class="grey-section">-->
+<!--        <div class="footer-row">-->
+<!--          <div class="footer-logos">-->
+<!--            <ul class="footer-socials">-->
+<!--              <li class="item"><a href=""><img src="public/Instagram.svg"/> </a> </li>-->
+<!--              <li class="item"><a href=""><img src="public/Facebook.svg"/> </a> </li>-->
+<!--              <li class="item"><a href=""><img src="public/Viber.svg"/> </a> </li>-->
+<!--            </ul>-->
+<!--          </div>-->
+<!--          <div class="footer-column">-->
+<!--            <h4 class="footer-title">-->
+<!--              Відділ продажу-->
+<!--            </h4>-->
+<!--            <div class="footer-label">-->
+<!--              Email-->
+<!--            </div>-->
+<!--            <div class="footer-txt">-->
+<!--              sales@netronic.com.ua-->
+<!--            </div>-->
+<!--            <div class="footer-label">-->
+<!--              Телефон-->
+<!--            </div>-->
+<!--            <div class="footer-txt">-->
+<!--              +38 (093) 332-38-43-->
+<!--            </div>-->
+<!--          </div>-->
+<!--          <div class="footer-column">-->
+<!--            <h4 class="footer-title">-->
+<!--              Технічна підтримка-->
+<!--            </h4>-->
+<!--            <div class="footer-label">-->
+<!--              Email-->
+<!--            </div>-->
+<!--            <div class="footer-txt">-->
+<!--              sales@netronic.com.ua-->
+<!--            </div>-->
+<!--            <div class="footer-label">-->
+<!--              Телефон-->
+<!--            </div>-->
+<!--            <div class="footer-txt">-->
+<!--              +38 (093) 332-38-43-->
+<!--            </div>-->
+<!--          </div>-->
+<!--        </div>-->
+<!--        <div class="footer-row">-->
+<!--          <div class="footer-logos">-->
+<!--            &nbsp;-->
+<!--          </div>-->
+<!--          <div class="footer-column">-->
+<!--            <span class="footer-tiny-txt">-->
+<!--              Політика конфіденційності-->
+<!--            </span>-->
+<!--          </div>-->
+<!--          <div class="footer-column">-->
+<!--             <span class="footer-tiny-txt">-->
+<!--              Copyright © 2023 All Rights Reserved.-->
+<!--            </span>-->
+<!--          </div>-->
+<!--        </div>-->
+<!--      </footer>-->
     </div>
     <script src="./js/accordion.js" type="text/javascript" charset="utf-8"></script>
+    <script src="./js/main.js" type="text/javascript" charset="utf-8"></script>
   </body>
 </html>
