@@ -1,10 +1,32 @@
 .banner-section {
-  margin-bottom: 120px;
+  margin-bottom: 80px;
+
+  @media screen and (min-width: 1200px) and (max-width: 1399px) {
+    margin-bottom: 100px;
+  }
+
+  @media screen and (min-width: 1400px) {
+    margin-bottom: 100px;
+  }
 }
 
 .banner-container {
-  align-items: center;
-  padding-top: 92px;
+  padding-top: 80px;
+  flex-direction: column;
+
+  @media screen and (min-width: 768px) {
+    flex-direction: row;
+    padding-top: 92px;
+    align-items: center;
+  }
+
+  .banner-image {
+    max-width: 680px;
+
+    @media screen and (min-width: 768px) {
+      max-width: 100%;
+    }
+  }
 
   .banner-image img {
     border-radius: 34px;
@@ -13,17 +35,40 @@
 }
 
 .banner-texts {
-  padding-left: 72px;
-  padding-right: 46px;
-  padding-top: 30px;
+  display: block;
+  padding: 30px 5px;
+
+  @media screen and (min-width: 768px) {
+    padding: 30px 15px 30px 5px;
+  }
+
+  @media screen and (min-width: 1400px) {
+    padding-left: 72px;
+    padding-right: 46px;
+    padding-top: 30px;
+  }
 
   .banner-title,
   .banner-sub-title {
-    font-size: 62px;
+    font-size: 30px;
     font-weight: bold;
     text-transform: uppercase;
-    margin-bottom: 20px;
+    margin-bottom: 6px;
     line-height: 1;
+
+    @media screen and (min-width: 520px) and (max-width: 767px) {
+      display: inline-block;
+    }
+
+    @media screen and (min-width: 768px) and (max-width: 1399px) {
+      font-size: 33px;
+      margin-bottom: 10px;
+    }
+
+    @media screen and (min-width: 1400px) {
+      font-size: 62px;
+      margin-bottom: 20px;
+    }
   }
 
   .banner-title {
@@ -31,13 +76,38 @@
   }
 
   .banner-description {
-    font-size: 32px;
-    margin-top: 30px;
+    font-size: 14px;
+    margin-top: 10px;
+
+    @media screen and (min-width: 768px) {
+      margin-top: 30px;
+      white-space: nowrap;
+    }
+
+    @media screen and (min-width: 768px) and (max-width: 1399px) {
+      font-size: 22px;
+      white-space: normal;
+    }
+
+    @media screen and (min-width: 1400px) {
+      font-size: 32px;
+      white-space: normal;
+    }
   }
 
   .btn-simple {
-    font-size: 30px;
-    padding: 16px 30px;
+    font-size: 18px;
+    padding: 10px 20px;
+
+    @media screen and (min-width: 768px) and (max-width: 1399px) {
+      font-size: 25px;
+      padding: 16px 30px;
+    }
+
+    @media screen and (min-width: 1200px){
+      font-size: 30px;
+      padding: 16px 30px;
+    }
   }
 }
 

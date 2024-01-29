@@ -14,7 +14,7 @@ header {
   position: relative;
   width: 97%;
 
-  @media screen and (max-width: 1400px) {
+  @media screen and (max-width: 1399px) {
     align-items: baseline;
   }
 
@@ -41,7 +41,7 @@ header {
   font-size: 0;
   vertical-align: middle;
 
-  @media screen and (max-width: 768px) {
+  @media screen and (max-width: 767px) {
     box-shadow: -6px 20px 16px 0 rgba(0, 0, 0, 0.07);
     background: $white;
     display: none;
@@ -50,7 +50,7 @@ header {
     right: 0;
   }
 
-  @media screen and (min-width: 768px) and (max-width: 1400px) {
+  @media screen and (min-width: 768px) and (max-width: 1399px) {
     display: block;
     margin-top: 15px;
   }
@@ -67,7 +67,7 @@ header {
   li {
     display: block;
     font-size: 0;
-    margin-right: 33px;
+    margin-right: 30px;
     margin-bottom: 10px;
 
     @media screen and (min-width: 768px) {
@@ -109,7 +109,7 @@ header {
 .header-contact {
   align-items: center;
 
-  @media screen and (min-width: 768px) and (max-width: 992px) {
+  @media screen and (min-width: 768px) and (max-width: 991px) {
     position: absolute;
     right: 0;
   }

@@ -1,25 +1,104 @@
+.form-section {
+  display: flex;
+  flex-direction: column-reverse;
+
+  @media screen and (min-width: 768px) {
+    flex-direction: row;
+  }
+}
+
 .form-title {
   text-align: center;
   text-transform: uppercase;
   margin: 0;
-  font-size: 40px;
-  margin-bottom: 35px;
+  font-size: 20px;
+  margin-bottom: 15px;
+
+  @media screen and (min-width: 768px) and (max-width: 1399px) {
+    font-size: 35px;
+    margin-bottom: 25px;
+  }
+
+  @media screen and (min-width: 1400px) {
+    font-size: 40px;
+    margin-bottom: 35px;
+  }
 }
 
 .form-holder {
   box-sizing: border-box;
-  padding: 38px 57px;
-  width: 40%;
+  padding: 12px;
+  width: 100%;
+
+  @media screen and (min-width: 768px) and (max-width: 1399px) {
+    padding: 25px 20px 25px 0;
+    width: 44%;
+  }
+
+  @media screen and (min-width: 1400px) {
+    width: 40%;
+    padding: 38px 57px;
+  }
+}
+
+.form-img {
+  border-radius: 20px;
+  overflow: hidden;
+  position: relative;
+  text-align: center;
+  width: 100%;
+
+  @media screen and (min-width: 768px) and (max-width: 1399px) {
+    width: 56%;
+  }
+
+  @media screen and (min-width: 1400px) {
+    width: 60%;
+  }
+
+  img {
+    border-radius: 20px;
+    max-width: none;
+
+    @media screen and (max-width: 767px) {
+      height: auto;
+      max-height: 400px;
+      max-width: 100%;
+    }
+
+    @media screen and (min-width: 768px) and (max-width: 1399px) {
+      height: 100%;
+      position: absolute;
+      top: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      width: auto;
+    }
+
+    @media screen and (min-width: 1400px) {
+      height: 100%;
+    }
+  }
 }
 
 .form-input {
   box-sizing: border-box;
   border-radius: 15px;
   border: 2px solid #000;
-  font-size: 20px;
-  padding: 25px 30px;
+  font-size: 13px;
+  padding: 15px 18px;
   letter-spacing: 1.4px;
   width: 100%;
+
+  @media screen and (min-width: 768px) and (max-width: 1399px) {
+    font-size: 18px;
+    padding: 20px 25px;
+  }
+
+  @media screen and (min-width: 1400px) {
+    font-size: 20px;
+    padding: 25px 30px;
+  }
 }
 
 .form-input-holder {

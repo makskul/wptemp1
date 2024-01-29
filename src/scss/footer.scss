@@ -1,7 +1,12 @@
+footer {
+  margin-bottom: 0 !important;
+}
+
 .footer-row {
   color: $white;
+  font-size: 0;
 
-  @media screen and (min-width: 480px) {
+  @media screen and (min-width: 768px) {
     display: grid;
     grid-template-columns: 33.3333% 33.3333% 33.3333%;
   }
@@ -15,13 +20,35 @@
   }
 
   &:first-child {
-    margin-bottom: 80px;
+    margin-bottom: 40px;
+
+    @media screen and (min-width: 1200px) {
+      margin-bottom: 80px;
+    }
   }
 }
 
 .footer-logos, .footer-column {
   box-sizing: border-box;
-  padding: 0 20px;
+  padding: 0 8px;
+
+  @media screen and (min-width: 1400px) {
+    padding: 0 20px;
+  }
+}
+
+.footer-logos {
+  @media screen and (min-width: 520px) and (max-width: 767px) {
+    margin-bottom: 20px;
+  }
+}
+
+.footer-column {
+  @media screen and (min-width: 520px) and (max-width: 767px) {
+    display: inline-block;
+    width: 48%;
+    margin: 0 1%;
+  }
 }
 
 .footer-title,
@@ -32,6 +59,7 @@
 
 .footer-title {
   font-size: 20px;
+  margin-top: 12px;
   margin-bottom: 34px;
 }
 
@@ -40,21 +68,37 @@
 }
 
 .footer-txt {
-  font-size: 20px;
+  font-size: 14px;
   letter-spacing: 1px;
 
   &:not(:last-child) {
     margin-bottom: 34px;
   }
+
+  @media screen and (min-width: 768px) {
+    font-size: 16px;
+  }
+
+  @media screen and (min-width: 1400px) {
+    font-size: 20px;
+  }
 }
 
 .footer-tiny-txt {
-  font-size: 16px;
+  font-size: 13px;
+
+  @media screen and (min-width: 1400px) {
+    font-size: 16px;
+  }
 }
 
 .footer-socials {
   list-style: none;
-  padding-left: 28px;
+  padding-left: 0;
+
+  @media screen and (min-width: 1200px) {
+    padding-left: 28px;
+  }
 
   & > .item {
     display: inline-block;
